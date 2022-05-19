@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<title>App Minhas Dividas</title>
+</head>
+<body>
+<div id="app">
+	<header id="header-app">
+		<div id="container">
+			<div class="header-title">
+				<h3>APP DIVIDAS</h3>
+			</div>
+			<div class="header-container">
+				<div>
+					<span>TOTAL DIVIDAS</span>
+					<p><strong class="red" id="divida"></strong></p>
+					<div class="total_divida">
+						<span>SALDO</span>
+						<p><strong id="saldo"></strong></p>
+					</div>
+				</div>
+				<div>
+					<div class="total_caixa">
+						<span>CAIXA</span>
+						<div>
+							<p><strong id="saldo"></strong></p>
+						
+							<input type="text" name="caixa" id="caixa" onkeydown="Mask.apply(this,'formatBRL')"  />						
+						</div>
+						<button class="btn-caixa box-shadow" id="cad_caixa">SALVAR</button>
+					</div>					
+				</div>
+			</div>			
+		</div>
+	</header>
+	<article id="split">
+		<ul id="lista">
+		</ul>
+			<section id="modal" class="modal box-shadow">
+				<div id="close-btn">
+					<button id="close" class="box-shadow">X</button>
+				</div>
+				<div id="card">				
+					<input type="text" name="descricao" id="desc" class="box-shadow" placeholder="Digite o nome da conta">
+					<input type="text" name="valor" id="valor" class="box-shadow" placeholder="Digite o valor da conta" onkeydown="Mask.apply(this,'formatBRL')" />
+					<button id="btn-cad" class="box-shadow" >Cadastar</button>
+				</div>
+			</section>
+		
+	</article>
+	<footer id="footer-style">
+		<button id="btn-cadastro">Cadastrar</button>
+	</footer>
+</div>
+<script type="text/javascript" src="todojs.js"></script>
+</body>
+</html>

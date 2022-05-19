@@ -1,0 +1,253 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+}
+body{
+	color: #fff;
+	background-color: #353535;
+	font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+	text-rendering: optimizeLegibility !important;
+	-webki-font-smoothing: antialiased !important;
+}
+input, button{
+	outline: 0;
+	border:0;
+}
+
+header#header-app{
+	position: fixed;
+	top:0;
+	height: 130PX;
+	width: 100%;
+	background-color: rgba(0,0,0,.70);
+}
+header#header-app .header-title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header-title h3{
+	margin-top: 5px;
+}
+
+header#header-app .header-container{
+	margin: 10px 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	
+}
+header#header-app .header-container .total_divida{
+ margin-top: 10px;
+}
+header#header-app .header-container .total_caixa div{
+	display: flex;
+	flex-direction: row;
+	
+}
+header#header-app .header-container .total_caixa div input{
+	margin-left: 5px;
+	
+}
+header#header-app .header-container input{
+	display: flex;
+	justify-content: center;
+	height: 20px;
+	width: 130px;
+	background-color: rgba(0,0,0,0);
+	border-bottom: 2px solid #2b7c42;
+	color: #2b7c42;
+
+}
+.btn-caixa{
+	margin-top: 15px;
+	height: 20px;
+	width: 100%;
+	background:  #2b7c42;
+	box-shadow: 0px 2px 3px 2px #fff6;
+}
+header#header-app .header-container span{
+	font-weight: bold;
+}
+header#header-app .header-container .red{
+	color:#e43534; 
+	padding-left: 5px;
+}
+header#header-app .header-container .green{
+	color:#2b7c42; 
+	padding-left: 5px;
+}
+header#header-app .resultado p {
+	margin-left: 10px;
+}
+
+header#header-app .resultado p strong {
+	margin-left: 5px;
+}
+.green{
+	color:#2b7c42; 
+}
+footer#footer-style {
+	position: fixed;
+	height: 48px;
+	width: 100%;
+	bottom:0;
+}
+.red{
+	color: #e43534;
+}
+footer#footer-style button{
+	color: #fff;
+	width: 100%;
+	height: 48px;
+	background-color:#2b7c42; 
+}
+.box-shadow{
+	box-shadow: 0px 0px 3px 1px rgba(116, 115, 115, 0.575);
+}
+
+section#modal{
+	position: absolute;
+	z-index: 1;
+	top:25%;
+	margin: 0px 16px;
+	height: 320px;
+	border-radius: 4%;
+	background-color: rgba(0,0,0,.70);	
+}
+	
+section#modal div#close-btn{
+	display: flex;
+	justify-content: flex-end;	
+}
+section#modal div#close-btn button{
+	width: 40px;
+	height: 40px;
+	border-radius: 15%;
+	background-color: rgba(0,0,0);
+	margin: 5px;
+	color:#fff;
+	border-image-slice: 1;
+  border-width: 5px;
+}
+section#modal div#card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	
+}
+
+section#modal input{
+	margin:20px 0 ;
+	display: flex;
+	justify-content: center;
+	height: 50px;
+	width: 90%;
+	background-color:#353535;
+	border-bottom: 2px solid #2b7c42;
+	font-size: 30px;
+	color: #fff;
+	padding: 0 12px;
+
+}
+
+section#modal div#card button#btn-cad{
+	margin: 10px 0;
+	width: 90%;
+	height: 48px;
+	color:#fff;
+	background-color: #2b7c42;	
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 16px;
+  font-weight: bold;
+}
+article#split{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 150px;
+	margin-bottom: 50px;
+
+}
+ul#lista{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	
+}
+ul#lista li {
+	padding: 10px;
+}
+ul#lista li a {
+	margin: 5px;
+	padding: 9px;
+	border-radius:25%;
+	color:#fff;
+	font-weight: bold;
+
+} 
+.excluir{
+	background-color: #e43534;
+}
+.editar{
+	background-color: #3600f8;
+	
+}
+/* article#split{
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background: royalblue;
+}
+ul#lista{
+	margin: 15px;
+	list-style: none;
+}
+*/
+.modal{
+		display: block;
+}
+.removeModal{
+	display: none;
+}
+@media(min-width: 760px){
+	div#app{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	header#header-app{
+		display: flex;
+		justify-content: center;
+	}
+	div#container{
+		width: 70%;
+	}
+	article#split{
+		display: flex;
+		width: 70%;
+	}
+	section#modal{
+		display: '';
+		position:relative;
+		background-color: rgba(0,0,0,.70);
+	}
+ 	article#split ul#lista{
+ 		order:2;
+ 	}
+ 	footer{
+ 		display: none;
+ 	}
+ 	section#modal div#close-btn button{
+ 		display: none;
+	}
+	.removeModal{
+		display: block;
+	}
+}
